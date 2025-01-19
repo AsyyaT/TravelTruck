@@ -21,5 +21,10 @@
 }
 
 .errorMessage {
-  color: var(--button);
+  color: var(--cl-accent);
+}
+
+.filterTitle {
+  line-height: 1.5;
+  color: var(--cl-secondary);
 }

@@ -2,9 +2,8 @@
   display: flex;
   gap: 4px;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
-  color: var(--main);
+  color: var(--cl-primary);
   align-items: center;
   margin-bottom: 16px;
 }
@@ -20,7 +19,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33;
-  color: var(--main);
+  color: var(--cl-primary);
   max-width: 360px;
 }
 
@@ -40,7 +39,6 @@
 
 .itemDescription {
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   color: var(--cl-secondary);
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTrailers } from "../../redux/trailer/operations";
 import TrailerList from "../../components/TrailerList/TrailerList";
-import Filters2 from "../../components/Filters/Filters";
+import Filters from "../../components/Filters/Filters";
 import css from "./CatalogPage.module.css";
 import { selectFilteredTrailers } from "../../redux/filters/selectors";
 import { isLoading } from "../../redux/trailer/selectors";
@@ -27,9 +27,8 @@ const CatalogPage = () => {
   return (
     <>
       <title>Catalog Page</title>
-
       <section className={css.catalogContainer}>
-        <Filters2 />
+        <Filters />
         <TrailerList
           filteredTrailers={filteredTrailers.slice(0, visibleCount)}
         />

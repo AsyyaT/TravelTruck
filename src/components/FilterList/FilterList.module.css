@@ -36,7 +36,7 @@
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 48px;
-  max-width: 360px;
+  max-width: 365px;
 }
 .filterItem {
   border: 1px solid var(--gray-light);

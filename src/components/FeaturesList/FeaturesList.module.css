@@ -12,7 +12,7 @@
 
   border-radius: 100px;
   background-color: var(--badges);
-  color: var(--main);
+  color: var(--cl-primary);
 }
 
 .name {
@@ -20,5 +20,5 @@
 }
 
 .item.update {
-  background-color: var(--grayLight);
+  background-color: var(--gray-light);
 }

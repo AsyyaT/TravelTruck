@@ -1,8 +1,7 @@
-location {
+.location {
   color: var(--cl-secondary);
   padding-bottom: 8px;
   font-weight: 400;
-  font-size: 16px;
 }
 
 .inputWrapper {
@@ -24,7 +23,6 @@ location {
 
 .inputLocation::placeholder {
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   color: var(--cl-primary);
 }
