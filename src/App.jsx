@@ -6,7 +6,7 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
 const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage.jsx"));
-// const TrailersPage = lazy(() => import("./pages/TrailersPage/TrailersPage.jsx"));
+const TrailerPage = lazy(() => import("./pages/TrailerPage/TrailerPage.jsx"));
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
-          {/* <Route path="/catalog/:id" element={<TrailersPage />} /> */}
+          <Route path="/catalog/:id/*" element={<TrailerPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

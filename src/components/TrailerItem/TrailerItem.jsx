@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import css from "./TrailerItem.module.css";
 import icons from "../../assets/sprite.svg";
-// import Features from "../Features/Features";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavourites } from "../../redux/favourites/selectors";
 import { toggleFavourite } from "../../redux/favourites/slice";
+import FeaturesList from "../FeaturesList/FeaturesList";
 
 const TrailerItem = ({ trailer }) => {
   const dispatch = useDispatch();
@@ -56,7 +56,7 @@ const TrailerItem = ({ trailer }) => {
         <p className={css.itemDescription}>
           {`${trailer.description.substring(0, 60)}` + "..."}
         </p>
-        {/* <Features trailer={trailer} /> */}
+        <FeaturesList trailer={trailer} />
         <Link
           to={`/catalog/${trailer.id}`}
           target="_blank"

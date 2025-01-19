@@ -31,7 +31,7 @@ const featuresTypes = [
     value: "AC",
   },
   {
-    iconPath: "diagram",
+    iconPath: "automatic",
     label: "Automatic",
     value: "automatic",
   },
@@ -87,7 +87,7 @@ const Filters = () => {
             />
 
             {errors.bodyType && touched.bodyType ? (
-              <div className={css.error}>{errors.bodyType}</div>
+              <div className={css.errorMessage}>{errors.bodyType}</div>
             ) : null}
 
             <button className={css.searchBtn} type="submit">

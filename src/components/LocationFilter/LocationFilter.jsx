@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectQuery, setQuery } from "../../redux/location/slice";
-import css from "../../components/Filters/Filters.module.css";
+import css from "./Location.module.css";
 import icons from "../../assets/sprite.svg";
 
 const LocationFilter = () => {
@@ -13,7 +13,7 @@ const LocationFilter = () => {
 
   return (
     <div className={css.inputWrapper}>
-      <p className={css.filterTitle}>Location</p>
+      <p className={css.location}>Location</p>
       <input
         className={css.inputLocation}
         type="text"
