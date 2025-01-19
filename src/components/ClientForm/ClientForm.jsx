@@ -31,7 +31,7 @@ const ClientForm = () => {
         }}
         validationSchema={Schema}
         onSubmit={(values, { resetForm }) => {
-          toast.success("You successfully send form!");
+          toast.success("Form successfully send!");
           resetForm();
         }}
       >

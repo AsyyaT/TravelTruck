@@ -1,16 +1,16 @@
-import { HashLoader } from "react-spinners";
+import { InfinitySpin } from "react-loader-spinner";
+import css from "./Loader.module.css";
 
 const Loader = () => {
   return (
-    <HashLoader
-      visible={true}
-      height="180"
-      width="180"
-      ariaLabel="color-ring-loading"
-      wrapperStyle={{}}
-      wrapperClass="color-ring-wrapper"
-      colors={["#475467", "#6C717B", "#D84343", "#ffffff", "#FFC531"]}
-    />
+    <div className={css.spinnerWrapper}>
+      <InfinitySpin
+        color="#e44848"
+        width="180"
+        visible={true}
+        ariaLabel="falling-circles-loading"
+      />
+    </div>
   );
 };
 

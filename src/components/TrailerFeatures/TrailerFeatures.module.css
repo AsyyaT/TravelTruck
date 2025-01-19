@@ -1,9 +1,14 @@
+.features {
+  display: flex;
+  margin-top: 50px;
+  gap: 40px;
+}
+
 .featuresSection {
   max-width: 631px;
   padding: 44px 80px;
   background-color: var(--inputs);
   border-radius: 10px;
-  margin: 44px 40px 0 0;
 }
 
 .title {
