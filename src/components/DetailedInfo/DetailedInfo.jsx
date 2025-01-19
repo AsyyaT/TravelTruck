@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import css from "./DetailedInfo.module.css";
 import { selectTrailer } from "../../redux/trailer/selectors";
 import icons from "../../assets/sprite.svg";
@@ -6,6 +6,8 @@ import clsx from "clsx";
 import { Navigate, NavLink, Route, Routes } from "react-router-dom";
 import TrailerFeatures from "../TrailerFeatures/TrailerFeatures";
 import TrailerReviews from "../TrailerReviews/TrailerReviews";
+import Modal from "../Modal/Modal";
+import { closeModal, openModal } from "../../redux/modal/slice";
 
 const activeLink = ({ isActive }) => {
   return clsx(css.detailsLink, isActive && css.active);
@@ -13,6 +15,18 @@ const activeLink = ({ isActive }) => {
 
 const DetailedInfo = () => {
   const trailer = useSelector(selectTrailer);
+
+  const dispatch = useDispatch();
+  const { isModalOpen, photoUrl } = useSelector((state) => state.modal);
+
+  const handleOpenModal = (url) => {
+    dispatch(openModal(url));
+  };
+
+  const handleCloseModal = () => {
+    dispatch(closeModal());
+  };
+
   return (
     <>
       <h2 className={css.nameTitle}>{trailer.name}</h2>
@@ -39,6 +53,7 @@ const DetailedInfo = () => {
                 className={css.photo}
                 src={item.thumb}
                 alt={`Gallery image ${index + 1}`}
+                onClick={() => handleOpenModal(item.original)}
               />
             </li>
           ))}
@@ -47,6 +62,11 @@ const DetailedInfo = () => {
         <p>No images available.</p>
       )}
       <p className={css.itemDescription}>{trailer.description}</p>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        photoUrl={photoUrl}
+      />
 
       <ul className={css.details}>
         <li className={css.detailsItem}>

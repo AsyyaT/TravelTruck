@@ -15,6 +15,7 @@ import { trailerReducer } from "./trailer/slice";
 import { filtersReducer } from "./filters/slice";
 import { locationReducer } from "./location/slice";
 import { favouritesReducer } from "./favourites/slice";
+import { modalReducer } from "./modal/slice";
 
 const filtersPersistConfig = {
   key: "filters",
@@ -32,6 +33,7 @@ export const store = configureStore({
     filters: persistReducer(filtersPersistConfig, filtersReducer),
     location: locationReducer,
     favourites: persistReducer(favouritesPersistConfig, favouritesReducer),
+    modal: modalReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
