@@ -13,16 +13,25 @@ import {
 import storage from "redux-persist/lib/storage";
 import { trailerReducer } from "./trailer/slice";
 import { filtersReducer } from "./filters/slice";
+import { locationReducer } from "./location/slice";
+import { favouritesReducer } from "./favourites/slice";
 
 const filtersPersistConfig = {
   key: "filters",
   storage,
 };
 
+const favouritesPersistConfig = {
+  key: "favourites",
+  storage,
+};
+
 export const store = configureStore({
   reducer: {
-    trailer: trailerReducer,
+    trailers: trailerReducer,
     filters: persistReducer(filtersPersistConfig, filtersReducer),
+    location: locationReducer,
+    favourites: persistReducer(favouritesPersistConfig, favouritesReducer),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

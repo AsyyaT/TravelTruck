@@ -1,0 +1,76 @@
+.filterWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchBtn {
+  border-radius: 200px;
+  width: 173px;
+  height: 56px;
+  background-color: var(--cl-accent);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-top: 32px;
+}
+
+.searchBtn:hover {
+  background-color: var(--cl-accent-hover);
+}
+
+.errorMessage {
+  color: var(--button);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.inputLocation {
+  border-radius: 12px;
+  padding: 18px 48px;
+  min-width: 300px;
+  max-width: 360px;
+  background-color: var(--inputs);
+  border: none;
+}
+
+.inputLocation::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--cl-primary);
+}
+
+.icon {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  pointer-events: none;
+}
+
+.elemTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--cl-primary);
+  margin-top: 32px;
+  position: relative;
+}
+
+.elemTitle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -24px;
+  transform: translateX(-50%);
+  width: 360px;
+  height: 1px;
+  background-color: var(--gray-light);
+}

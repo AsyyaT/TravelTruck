@@ -14,6 +14,5 @@ export const initialState = {
   filters: {
     features: [],
     form: "",
-    location: "",
   },
 };

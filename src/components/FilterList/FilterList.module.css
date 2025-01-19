@@ -1,0 +1,70 @@
+.filterTitle {
+  line-height: 1.5;
+  color: var(--cl-secondary);
+  margin-bottom: 8px;
+}
+
+.icon {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  pointer-events: none;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--cl-primary);
+  margin-top: 32px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -24px;
+  transform: translateX(-50%);
+  width: 360px;
+  height: 1px;
+  background-color: var(--gray-light);
+}
+
+.groupWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 48px;
+  max-width: 360px;
+}
+.filterItem {
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  width: 112px;
+  height: 96px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--cl-primary);
+}
+
+.groupWrapper input[type="checkbox"],
+.groupWrapper input[type="radio"] {
+  display: none;
+}
+
+.groupWrapper p:hover {
+  border-color: var(--cl-accent-hover);
+}
+
+.groupWrapper input[type="checkbox"]:checked + p,
+.groupWrapper input[type="radio"]:checked + p {
+  border: 1px solid var(--cl-accent-hover);
+}

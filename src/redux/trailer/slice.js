@@ -28,7 +28,7 @@ const trailerSlice = createSlice({
       .addCase(fetchTrailersDetails.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.truck = action.payload;
+        state.trailer = action.payload;
       })
       .addCase(fetchTrailersDetails.rejected, handleRejected);
   },

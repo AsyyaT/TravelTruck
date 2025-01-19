@@ -1,0 +1,34 @@
+location {
+  color: var(--cl-secondary);
+  padding-bottom: 8px;
+}
+
+.svg {
+  position: absolute;
+  left: 20px;
+}
+
+.input {
+  width: 360px;
+  height: 56px;
+  background-color: var(--inputs);
+  padding: 18px 20px 18px 45px;
+  color: var(--cl-primary);
+  border-radius: 12px;
+  border: transparent;
+}
+
+.input::placeholder {
+  color: var(--cl-primary);
+  right: 20px;
+  position: absolute;
+  left: 48px;
+}
+
+.btn {
+  width: 10px;
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  border: transparent;
+}

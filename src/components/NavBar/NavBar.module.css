@@ -1,17 +1,8 @@
 .header {
-  width: 1440px;
-  margin: 0;
-  padding: 0;
-  height: 72px;
+  border-bottom: 1px solid var(--badges);
+  background-color: var(--inputs);
+  padding: 24px 64px;
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  background-color: #f7f7f7;
-  border: 1px solid #f2f4f7;
-}
-.nav {
-  display: flex;
-  width: 1440px;
-  margin-left: 64px;
   align-items: center;
+  justify-content: space-between;
 }
